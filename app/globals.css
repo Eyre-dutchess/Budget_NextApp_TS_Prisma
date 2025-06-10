@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@layer base{
+    form{
+        display:flex;
+        flex-direction:row;
+        align-items: center; 
+        gap:0.5em ;
+        justify-content:center;
+        width:100%;
+        height:max-content;
+        transition: all 300ms ease-in-out  ;
+        padding-inline: 0.5em;
+    }
+    form:focus-within{
+        border: none;
+    }
+    input{
+        width:100%;
+        height:100% ;
+        padding-block:0.5em;
+        color: hsl(240 ,70%, 35%, 0.5) ;
+        outline:none;
+        padding-inline:1em;
+        aspect-ratio: 0.25em;
+        transition: all 300ms ease-in-out  ;
+        border-bottom: 1px solid hsl(240 ,70%, 35%, 0.15);  
+        background:transparent;
+    }
+    input::placeholder{
+        opacity: 50%;
+        color: white;
+    }
+
+    input:focus::placeholder{
+        opacity: 5%
+    }
+ 
+    input,
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 50px rgba(255, 255, 255, 0) inset !important;
+        background-color: transparent !important;
+        background-clip: text;
+        color:hsl(240 ,70%, 35%, 0.25) ; 
+        }}
